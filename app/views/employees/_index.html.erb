@@ -1,0 +1,31 @@
+
+<h1>Employees</h1>
+
+
+
+	<% for employee in @employee %>
+		<div class="index">
+
+			<%= link_to h(employee.first_name), employee%> <%= link_to h(employee.last_name), employee%> </br>
+
+			<p>
+				<strong>Company:</strong>
+				<%= employee.company_name%>
+			</p>
+			<p>
+				<strong>Designation:</strong>
+				<%= employee.designation%>
+			</p>
+			<p>
+				<strong>Photos:</strong>
+				<% if employee.image.present?%>
+					<%= image_tag employee.image.thumb.url %>
+				<% else %>
+					No attachement available!
+				<% end %>
+
+			</p>
+
+		</div>
+
+	<% end %>

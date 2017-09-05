@@ -1,0 +1,4 @@
+<h1>HumanResources#index</h1>
+<% unless current_user.role == "Employee"%>
+	<%= link_to 'create new', new_human_resource_path%>
+<% end %>

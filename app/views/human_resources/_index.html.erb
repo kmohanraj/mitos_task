@@ -1,0 +1,34 @@
+<h1>HumanResources#index</h1>
+<%if current_user.role == "Employee"%>
+  <% @hr= HumanResource.all%>
+	<% for hr in @hr%>
+	  <div class="index">
+
+		<p>
+			<strong>Hr Name:</strong>
+			<%= hr.first_name%> <%= hr.last_name%>
+		</p>
+
+		<p>
+			<strong>Company name:</strong>
+			<%= hr.company_name%>
+		</p>
+
+		<p>
+			<strong>Place:</strong>
+			<%= hr.place%>
+		</p>
+		
+		<p>
+			<strong>Email:</strong>
+			<%= hr.email%>
+		</p>
+
+		<p>
+			<strong>Contact No:</strong>
+			<%= hr.contact_no%>
+		</p>
+	   </div>
+	<% end %>
+		<%#= link_to 'create new', new_employee_path%>
+<% end %>

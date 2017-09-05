@@ -1,0 +1,113 @@
+<h1>Employees#show</h1>
+<%= link_to 'Edit' , edit_employee_path(@employee.id)%>
+
+<h2>Personal details:</h2>
+
+	<p>
+		<strong>First Name:</strong>
+		<%= @employee.first_name%>
+	</p>
+
+
+	<p>
+		<strong>Last Name:</strong>
+		<%= @employee.last_name%>
+	</p>
+
+
+	<p>
+		<strong>Address:</strong>
+		<%= @employee.address%>
+	</p>
+
+	<p>
+		<strong>Place:</strong>
+		<%= @employee.place%>
+	</p>
+	<p>
+		<strong>Photos</strong>
+		<% if @employee.image.present?%>
+			<%= image_tag @employee.image.thumb.url%>
+		<% else %>
+			No attachement available!
+		<% end %>
+	</p>
+
+	<p>
+		<strong>Last Name:</strong>
+		<%= @employee.company_name%>
+	</p>
+
+	<p>
+		<strong>Last Name:</strong>
+		<%= @employee.company_name%>
+	</p>
+
+<h2>Company Details</h2>
+	
+	<p>
+		<strong>Designation:</strong>
+		<%= @employee.designation%>
+	</p>
+	<p>
+		<strong>Company Name:</strong>
+		<%= @employee.company_name%>
+	</p>
+	<p>
+		<strong>Total Experiance:</strong>
+		<%= @employee.total_exp%>
+	</p>
+	
+
+<h2>Family Details:</h2>
+
+	<p>
+		<strong>father name:</strong>
+		<%= @employee.father_name%>
+	  	<%#= image_tag @employee.image.thumb.url %>
+	</p>
+
+
+	<p>
+		<strong>Last Name:</strong>
+		<%= @employee.mother_name%>
+	</p>
+
+
+	<p>
+		<strong>Address:</strong>
+		<%= @employee.spouse_name%>
+	</p>
+
+	<p>
+		<strong>Place:</strong>
+		<%= @employee.children_name%>
+	</p>
+	
+<h2>Pay Slip: </h2>
+
+	<p>
+		<strong>Salary:</strong>
+		<%= @employee.salary%>
+	</p>
+
+	<p>
+		<strong>Pf:</strong>
+		<%= @employee.pf%>
+	</p>
+
+	<p>
+		<strong>Esic:</strong>
+		<%= @employee.esic%>
+	</p>
+
+	<p>
+		<strong>Total Salary:</strong>
+		<%= @employee.total_salary%>
+	</p>
+
+
+
+
+
+

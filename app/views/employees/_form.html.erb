@@ -1,0 +1,133 @@
+
+<%= form_for @employee  do |f|%>
+	<% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this pet from being saved:</h2>
+ 
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h2>Personal profile:</h2>
+  <div>
+	<p>
+		<%= f.label :first_name%>
+		<%= f.text_field :first_name%>
+	</p>
+
+	<p>
+		<%= f.label :last_name%>
+		<%= f.text_field :last_name%>
+	</p>
+
+	<p>
+		<%= f.label :address%>
+		<%= f.text_field :address%>
+	</p>
+
+	<p>
+		<%= f.label :place%>
+		<%= f.text_field :place%>
+	</p>
+
+	
+	<p>
+		<%= f.label :contact_no%>
+		<%= f.text_field :contact_no%>
+	</p>
+
+	<p>
+		<%= f.label :email%>
+		<%= f.text_field :email%>
+	</p>
+
+
+	<p>
+		<%= f.label :photo%>
+		<%= f.file_field :image%>
+	    <% if f.object.image? %>
+    	  <%= image_tag f.object.image.thumb.url %>
+      		<%= f.label :remove_image %>
+      		<%= f.check_box :remove_image %> 
+    	<% end %>
+	</p>
+  </div>
+
+ <h2>Company Details</h2>
+	
+	<p>
+		<%= f.label :designation%>
+		<%= f.text_field :designation%>
+	</p>
+
+	<p>
+		<%= f.label :company_name%>
+		<%= f.text_field :company_name%>
+	</p>
+
+
+	<p>
+		<%= f.label :total_exp%>
+		<%= f.text_field :total_exp%>
+	</p>
+
+
+ <h2>Family Details:</h2>
+
+
+	<p>
+		<%= f.label :father_name%>
+		<%= f.text_field :father_name%>
+	</p>
+
+	<p>
+		<%= f.label :mother_name%>
+		<%= f.text_field :mother_name%>
+	</p>
+
+	<p>
+		<%= f.label :spouse_name%>
+		<%= f.text_field :spouse_name%>
+	</p>
+
+
+	<p>
+		<%= f.label :children_name%>
+		<%= f.text_field :children_name%>
+	</p>
+
+ <h2>Pay Slip: </h2>
+
+
+	<p>
+		<%= f.label :salary%>
+		<%= f.text_field :salary%>
+	</p>
+
+
+	<p>
+		<%= f.label :pf%>
+		<%= f.text_field :pf%>
+	</p>
+
+	<p>
+		<%= f.label :esic%>
+		<%= f.text_field :esic%>
+	</p>
+
+	<p>
+		<%= f.label :total_salary%>
+		<%= f.text_field :total_salary%>
+	</p>
+
+
+
+	<p>
+		<%= f.submit "create"%>
+	</p>
+
+<% end %>

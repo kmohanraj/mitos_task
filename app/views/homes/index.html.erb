@@ -1,0 +1,8 @@
+
+	<% if current_user.role == "Employee"%>
+		<%= render 'human_resources/index'%>
+	<% else %>
+		<li><%= link_to 'New employee', new_employee_path%></li>
+		<li><%= link_to 'New hr', new_human_resource_path%></li>
+		<%= render 'employees/index'%>
+	<% end %>
