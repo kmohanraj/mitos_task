@@ -1,4 +1,4 @@
-
+<div class="edit_hr">
 <h1>Employees</h1>
 
 
@@ -6,7 +6,7 @@
 	<% for employee in @employee %>
 		<div class="index">
 
-			<%= link_to h(employee.first_name), employee%> <%= link_to h(employee.last_name), employee%> </br>
+			<strong>Name:</strong><%= link_to h(employee.first_name), employee%> <%= link_to h(employee.last_name), employee%> </br>
 
 			<p>
 				<strong>Company:</strong>
@@ -29,3 +29,4 @@
 		</div>
 
 	<% end %>
+</div>

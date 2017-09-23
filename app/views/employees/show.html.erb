@@ -1,6 +1,7 @@
 <h1>Employees#show</h1>
 <%= link_to 'Edit' , edit_employee_path(@employee.id)%>
 
+<div>
 <h2>Personal details:</h2>
 
 	<p>
@@ -42,7 +43,8 @@
 		<strong>Last Name:</strong>
 		<%= @employee.company_name%>
 	</p>
-
+</div>
+<div>
 <h2>Company Details</h2>
 	
 	<p>
@@ -57,8 +59,9 @@
 		<strong>Total Experiance:</strong>
 		<%= @employee.total_exp%>
 	</p>
-	
+</div>
 
+<div>
 <h2>Family Details:</h2>
 
 	<p>
@@ -83,7 +86,7 @@
 		<strong>Place:</strong>
 		<%= @employee.children_name%>
 	</p>
-	
+</div>
 <h2>Pay Slip: </h2>
 
 	<p>

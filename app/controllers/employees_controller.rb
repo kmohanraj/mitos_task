@@ -9,7 +9,7 @@ class EmployeesController < ApplicationController
   end
 
   def new
-  	@employee = Employee.new
+    	@employee = Employee.new
   end
 
   def create
@@ -18,7 +18,7 @@ class EmployeesController < ApplicationController
     if @employee.save
       @employee.update(:user_id=>@user.id)
   		flash[:notice] = "employee successfully created."
-  		redirect_to :controller=>"employees", :action=>"index"
+      redirect_to root_path
   	else
   		flash[:notice] = "somthing error"
   		render "new"
@@ -42,15 +42,13 @@ class EmployeesController < ApplicationController
   end
 
   def show
-  	@employee = Employee.find(params[:id])
+    	@employee = Employee.find(params[:id])
   end
 
-  def show_family
-    @employee = Employee.find(params[:id])
-
-    # if !@employee.company_name.blank?
+  # def show_family
+  #   @employee = Employee.find(params[:id])
     
-  end
+  # end
 
 
 

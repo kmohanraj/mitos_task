@@ -1,41 +1,50 @@
-
+<div class="edit_hr">
 <%= form_for :hr, :url=>{:controller=>'human_resources', :action=>'create'}  do |f|%>
 
 
-	<p>
+  <div class="row">
+	<div class="col_4">
 		<%= f.label :first_name%>
 		<%= f.text_field :first_name%>
-	</p>
+	</div>
 
-	<p>
+	<div class="col_4">
+
 		<%= f.label :last_name%>
 		<%= f.text_field :last_name%>
-	</p>
+	</div>
 
-	<p>
+    <div class="col_4">
+
 		<%= f.label :company_name%>
 		<%= f.text_field :company_name%>
-	</p>
+	</div>
+  </div>
+  <div class="row">
 
-	<p>
+    <div class="col_4">
+
 		<%= f.label :place%>
 		<%= f.text_field :place%>
-	</p>
+	</div>
 
-	<p>
+    <div class="col_4">
+
 		<%= f.label :email%>
 		<%= f.text_field :email%>
-	</p>
+	</div>
 
-	<p>
+	<div class="col_4">
 		<%= f.label :contact_no%>
 		<%= f.text_field :contact_no%>
-	</p>
+	</div>
 
-	
+ </div>
+     <div class="row">
 
-	<p>
-		<%= f.submit "create"%>
-	</p>
-
+ 	<div class="col_4">
+		<%= f.submit "create", class: 'submit'%>
+	</div>
+	</div>
 <% end %>
+</div>

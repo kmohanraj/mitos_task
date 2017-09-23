@@ -5,12 +5,12 @@
 	<% end %>
 
 
-<h1>Employees#index</h1>
+<h1>Employees</h1>
 
 	<% for employee in @employees %>
 		<div class="index">
 
-			<%= link_to h(employee.first_name), employee%> <%= link_to h(employee.last_name), employee%> </br>
+			<strong>Name:</strong><%= link_to h(employee.first_name), employee%> <%= link_to h(employee.last_name), employee%> </br>
 
 			<p>
 				<strong>Company:</strong>

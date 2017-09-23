@@ -1,4 +1,5 @@
-<h1>HumanResources#index</h1>
+<div class="edit_hr">
+<h1>Human Resources</h1>
 <%if current_user.role == "Employee"%>
   <% @hr= HumanResource.all%>
 	<% for hr in @hr%>
@@ -32,3 +33,4 @@
 	<% end %>
 		<%#= link_to 'create new', new_employee_path%>
 <% end %>
+</div>

@@ -16,7 +16,7 @@ class HumanResourcesController < ApplicationController
   	if @hr.save
       @hr.update(:user_id=>@user.id)
   		flash[:notice] = 'successfully created'
-  		redirect_to :controller=>'employees', :action=>'index'
+      redirect_to root_path
   	else
   		flash[:notice] = 'invalid'
   		render 'new'
@@ -38,7 +38,7 @@ class HumanResourcesController < ApplicationController
   end
 
   def show
-  	@hr = HumanResources.find(params[:id])
+  	@hr = HumanResource.find(params[:id])
   end
 
   private
