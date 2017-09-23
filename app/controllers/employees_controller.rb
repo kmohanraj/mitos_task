@@ -13,7 +13,7 @@ class EmployeesController < ApplicationController
   end
 
   def create
-    @user = User.find_by(params[:id])
+    @user = current_user
   	@employee = Employee.new(employee_params)
     if @employee.save
       @employee.update(:user_id=>@user.id)
@@ -59,17 +59,10 @@ class EmployeesController < ApplicationController
 
     def emp
       @employee = Employee.find_by(params[:id])
-      p "eeeeeeeeeeeee"
-
-      p @employee
-      p "eeeeeeeeeeeee"
     end
 
     def get_user
-      @user = User.find_by(params[:id])
-      p "1111111111111111111"
-      p @user
-      p "1111111111111111111"
+      @user = current_user
     end
     
 end

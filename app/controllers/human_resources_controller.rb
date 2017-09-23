@@ -11,7 +11,7 @@ class HumanResourcesController < ApplicationController
   end
 
   def create
-    @user = User.find_by(params[:id])
+    @user = current_user
   	@hr = HumanResource.new(hr_params)
   	if @hr.save
       @hr.update(:user_id=>@user.id)
